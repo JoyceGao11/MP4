@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>我的视频空间</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      text-align: center;
+    }
+    .container {
+      width: 90%;
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    h1 { font-size: 2.5em; margin-bottom: 10px; text-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+    p { font-size: 1.1em; opacity: 0.9; margin-bottom: 25px; }
+    video {
+      width: 100%; max-width: 640px; height: auto; margin: 20px 0;
+      border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      background: black;
+    }
+    .filename { margin-top: 10px; font-size: 0.9em; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎥 我的视频空间</h1>
+    <p>上传并分享我的精彩瞬间</p>
+    <video id="player" controls></video>
+    <p class="filename">当前视频：已加载</p>
+    <script>
+      // 自动播放第一个视频（需手动放一个视频文件叫 "myvideo.mp4"）
+      document.getElementById('player').src = 'myvideo.mp4';
+    </script>
+  </div>
+</body>
+</html>
